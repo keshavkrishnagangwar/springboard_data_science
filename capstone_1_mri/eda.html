@@ -11842,7 +11842,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plot_dx_multibox</span><span class="p">(</span><span class="n">list_of_measures</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plot_dx_multibox</span><span class="p">(</span><span class="n">list_of_measures</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
     <span class="c1"># make subplots</span>
     <span class="n">fig</span> <span class="o">=</span> <span class="n">plotly</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">make_subplots</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="n">cols</span><span class="p">,</span> <span class="n">subplot_titles</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">list_of_measures</span><span class="p">),</span> <span class="n">print_grid</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">row</span> <span class="o">=</span> <span class="mi">1</span>
@@ -11888,7 +11888,7 @@ div#notebook {
             <span class="n">row</span> <span class="o">=</span> <span class="mi">1</span>
             <span class="n">col</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="n">fig</span><span class="p">[</span><span class="s1">&#39;layout&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;mri&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;mri&#39;</span><span class="o">+</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11898,7 +11898,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[224]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># list of measures to drop from analysis based on inspection of the dataset</span>
@@ -11934,6 +11934,14 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In this first section, we'll look at some of the demographic information available in the dataset and how it relates to the different levels of cognitive function.</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.1.1-Age-and-gender">2.1.1 Age and gender<a class="anchor-link" href="#2.1.1-Age-and-gender">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -12264,7 +12272,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.2-Performance-on-Cognitive-Assessments">2.2 Performance on Cognitive Assessments<a class="anchor-link" href="#2.2-Performance-on-Cognitive-Assessments">&#182;</a></h3>
+<h3 id="2.1.2-Performance-on-Cognitive-Assessments">2.1.2 Performance on Cognitive Assessments<a class="anchor-link" href="#2.1.2-Performance-on-Cognitive-Assessments">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -12946,7 +12954,7 @@ div#notebook {
                       <span class="n">hoverinfo</span><span class="o">=</span><span class="s1">&#39;x+y+z&#39;</span><span class="p">)</span>
 
 <span class="c1"># make subplots</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plotly</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">make_subplots</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">subplot_titles</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Baseline&#39;</span><span class="p">,</span> <span class="s1">&#39;CN&#39;</span><span class="p">,</span> <span class="s1">&#39;AD&#39;</span><span class="p">,</span> <span class="s1">&#39;SMC&#39;</span><span class="p">,</span> <span class="s1">&#39;EMCI&#39;</span><span class="p">,</span> <span class="s1">&#39;LMCI&#39;</span><span class="p">),</span> <span class="n">print_grid</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plotly</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">make_subplots</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">subplot_titles</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Whole Group&#39;</span><span class="p">,</span> <span class="s1">&#39;CN&#39;</span><span class="p">,</span> <span class="s1">&#39;AD&#39;</span><span class="p">,</span> <span class="s1">&#39;SMC&#39;</span><span class="p">,</span> <span class="s1">&#39;EMCI&#39;</span><span class="p">,</span> <span class="s1">&#39;LMCI&#39;</span><span class="p">),</span> <span class="n">print_grid</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">append_trace</span><span class="p">(</span><span class="n">trace_bl</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">append_trace</span><span class="p">(</span><span class="n">trace_cn</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">append_trace</span><span class="p">(</span><span class="n">trace_ad</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
@@ -13001,7 +13009,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.3-Volumetric-Brain-Measures">2.3 Volumetric Brain Measures<a class="anchor-link" href="#2.3-Volumetric-Brain-Measures">&#182;</a></h3>
+<h3 id="2.1.3-Volumetric-Brain-Measures">2.1.3 Volumetric Brain Measures<a class="anchor-link" href="#2.1.3-Volumetric-Brain-Measures">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13224,123 +13232,6 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># plot hippocampus</span>
-<span class="n">plot_dx_multibox</span><span class="p">(</span><span class="n">s_mri</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[49]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~ilikebrains/90.embed" height="525px" width="100%"></iframe>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The overall pattern here is what we would expect. AD is neurodegenerative, in that there is atrophy in brain regions, especially those like the hippocampus that are critical for memory. Lower volumetric estimates indicate the brain region is smaller. In both the left and right hippocampus, we can see that there is a decrease of volume with increasing cognitive impairment. Interestingly though, the SMC group has larger hippocampi than the CN group, although the difference likely isn't statistically significant.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># plot entorhinal cortex</span>
-<span class="n">plot_dx_multibox</span><span class="p">(</span><span class="n">s_mri</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">7</span><span class="p">],</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[50]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~ilikebrains/90.embed" height="525px" width="100%"></iframe>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Similar to the hippocampus, we can see that the volume of the entorhinal cortex appears to relate to cognitive impairment. Lastly, let's look the cortical thickness of the entorhinal cortex.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># plot entorhinal cortex thickness</span>
-<span class="n">plot_dx_multibox</span><span class="p">(</span><span class="n">s_mri</span><span class="p">[</span><span class="mi">7</span><span class="p">:],</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[51]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~ilikebrains/90.embed" height="525px" width="100%"></iframe>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -13354,7 +13245,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.4-Ecog-Measures">2.4 Ecog Measures<a class="anchor-link" href="#2.4-Ecog-Measures">&#182;</a></h3>
+<h3 id="2.1.4-Ecog-Measures">2.1.4 Ecog Measures<a class="anchor-link" href="#2.1.4-Ecog-Measures">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13515,7 +13406,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.5-fMRI-Functional-Connectivity">2.5 fMRI Functional Connectivity<a class="anchor-link" href="#2.5-fMRI-Functional-Connectivity">&#182;</a></h3>
+<h3 id="2.1.5-fMRI-Functional-Connectivity">2.1.5 fMRI Functional Connectivity<a class="anchor-link" href="#2.1.5-fMRI-Functional-Connectivity">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13641,7 +13532,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.6-DTI-Measures">2.6 DTI Measures<a class="anchor-link" href="#2.6-DTI-Measures">&#182;</a></h3>
+<h3 id="2.1.6-DTI-Measures">2.1.6 DTI Measures<a class="anchor-link" href="#2.1.6-DTI-Measures">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13894,7 +13785,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.7-Genetic-Measure">2.7 Genetic Measure<a class="anchor-link" href="#2.7-Genetic-Measure">&#182;</a></h3>
+<h3 id="2.1.7-Genetic-Measure">2.1.7 Genetic Measure<a class="anchor-link" href="#2.1.7-Genetic-Measure">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13993,7 +13884,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.8-A-Portrait-of-Alzheimer's-Disease">2.8 A Portrait of Alzheimer's Disease<a class="anchor-link" href="#2.8-A-Portrait-of-Alzheimer's-Disease">&#182;</a></h3>
+<h3 id="2.1.8-A-Portrait-of-Alzheimer's-Disease">2.1.8 A Portrait of Alzheimer's Disease<a class="anchor-link" href="#2.1.8-A-Portrait-of-Alzheimer's-Disease">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14008,7 +13899,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[375]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># age trace</span>
@@ -14058,6 +13949,7 @@ div#notebook {
 <span class="c1"># update layout</span>
 <span class="n">fig</span><span class="p">[</span><span class="s1">&#39;layout&#39;</span><span class="p">][</span><span class="s1">&#39;yaxis1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="mi">70</span><span class="p">,</span><span class="mi">75</span><span class="p">])</span>
 <span class="n">fig</span><span class="p">[</span><span class="s1">&#39;layout&#39;</span><span class="p">][</span><span class="s1">&#39;yaxis3&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Years of Education&#39;</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">])</span>
+<span class="n">fig</span><span class="p">[</span><span class="s1">&#39;layout&#39;</span><span class="p">][</span><span class="s1">&#39;yaxis4&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
 <span class="n">fig</span><span class="p">[</span><span class="s1">&#39;layout&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;ad_portrait&#39;</span><span class="p">)</span>
 </pre></div>
@@ -14072,7 +13964,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[68]:</div>
+<div class="prompt output_prompt">Out[375]:</div>
 
 
 
@@ -14099,7 +13991,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.2-Characteristics-of-diagnostic-change">2.2 Characteristics of diagnostic change<a class="anchor-link" href="#2.2-Characteristics-of-diagnostic-change">&#182;</a></h3>
+<h2 id="2.2-Diagnostic-change">2.2 Diagnostic change<a class="anchor-link" href="#2.2-Diagnostic-change">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14107,14 +13999,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This section will explore the target variable we're interested in forcasting is the conversion to AD, which is coded by the diagnositic change (DXCHANGE) column in the dataframe. The different categories for this variable are:</p>
+<p>This section will explore our target variable which is the conversion to AD. This is coded by the diagnositic change (DXCHANGE) column in the dataframe. The different categories for this variable are:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">vector_dict</span><span class="o">.</span><span class="n">dx_change_ids</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -14122,6 +14014,33 @@ div#notebook {
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Value 1 represents Stable:NL to NL
+Value 2 represents Stable:MCI to MCI
+Value 3 represents Stable:AD to AD
+Value 4 represents Conv:NL to MCI
+Value 5 represents Conv:MCI to AD
+Value 6 represents Conv:NL to AD
+Value 7 represents Rev:MCI to NL
+Value 8 represents Rev:AD to MCI
+Value 9 represents Rev:AD to NL
+Value -1 represents Not available
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -14134,6 +14053,985 @@ div#notebook {
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>First, let's visualize some of the demographic information of patients that convert to AD.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[393]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># extract baseline datapoints for converts</span>
+<span class="n">dx_bl_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">dxchange</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">dxchange</span> <span class="o">==</span> <span class="mi">6</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">viscode</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)]</span>
+<span class="n">dx_bl_df</span><span class="o">.</span><span class="n">dx_bl</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[393]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>LMCI    271
+EMCI     39
+CN       20
+AD        6
+SMC       1
+Name: dx_bl, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Intestingly, there are 6 patients that are reported as AD at baseline who convert to AD.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[316]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dx_bl_df</span><span class="p">[</span><span class="n">dx_bl_df</span><span class="o">.</span><span class="n">dx_bl</span> <span class="o">==</span> <span class="s1">&#39;AD&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[316]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rid</th>
+      <th>viscode</th>
+      <th>d1</th>
+      <th>d2</th>
+      <th>dx_bl</th>
+      <th>dxchange</th>
+      <th>age</th>
+      <th>ptgender</th>
+      <th>pteducat</th>
+      <th>ptethcat</th>
+      <th>...</th>
+      <th>av1451_entorhinal_l</th>
+      <th>av1451_entorhinal_r</th>
+      <th>fa_hippocampus_l</th>
+      <th>fa_hippocampus_r</th>
+      <th>md_hippocampus_l</th>
+      <th>md_hippocampus_r</th>
+      <th>apoe4</th>
+      <th>admnrv</th>
+      <th>pdmnrv</th>
+      <th>dmnrvr</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>352</th>
+      <td>78</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>AD</td>
+      <td>5.0</td>
+      <td>76.0</td>
+      <td>Female</td>
+      <td>18</td>
+      <td>Not Hisp/Latino</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>763</th>
+      <td>162</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>AD</td>
+      <td>3.0</td>
+      <td>71.8</td>
+      <td>Male</td>
+      <td>18</td>
+      <td>Not Hisp/Latino</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>890</th>
+      <td>190</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>AD</td>
+      <td>5.0</td>
+      <td>78.8</td>
+      <td>Male</td>
+      <td>18</td>
+      <td>Not Hisp/Latino</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3794</th>
+      <td>995</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>AD</td>
+      <td>5.0</td>
+      <td>78.5</td>
+      <td>Female</td>
+      <td>12</td>
+      <td>Not Hisp/Latino</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4358</th>
+      <td>1154</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>AD</td>
+      <td>5.0</td>
+      <td>76.6</td>
+      <td>Male</td>
+      <td>18</td>
+      <td>Not Hisp/Latino</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4610</th>
+      <td>1226</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>AD</td>
+      <td>5.0</td>
+      <td>82.6</td>
+      <td>Male</td>
+      <td>16</td>
+      <td>Not Hisp/Latino</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>6 rows × 61 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Everyone except patient 162 appears to have gotten a conversion from MCI to AD at the baseline assessment. Let's look at patient 162.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[317]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">rid</span> <span class="o">==</span> <span class="mi">162</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[317]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rid</th>
+      <th>viscode</th>
+      <th>d1</th>
+      <th>d2</th>
+      <th>dx_bl</th>
+      <th>dxchange</th>
+      <th>age</th>
+      <th>ptgender</th>
+      <th>pteducat</th>
+      <th>ptethcat</th>
+      <th>...</th>
+      <th>av1451_entorhinal_l</th>
+      <th>av1451_entorhinal_r</th>
+      <th>fa_hippocampus_l</th>
+      <th>fa_hippocampus_r</th>
+      <th>md_hippocampus_l</th>
+      <th>md_hippocampus_r</th>
+      <th>apoe4</th>
+      <th>admnrv</th>
+      <th>pdmnrv</th>
+      <th>dmnrvr</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>763</th>
+      <td>162</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>AD</td>
+      <td>3.0</td>
+      <td>71.8</td>
+      <td>Male</td>
+      <td>18</td>
+      <td>Not Hisp/Latino</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>764</th>
+      <td>162</td>
+      <td>6</td>
+      <td>1</td>
+      <td>0</td>
+      <td>AD</td>
+      <td>8.0</td>
+      <td>71.8</td>
+      <td>Male</td>
+      <td>18</td>
+      <td>Not Hisp/Latino</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>765</th>
+      <td>162</td>
+      <td>12</td>
+      <td>1</td>
+      <td>0</td>
+      <td>AD</td>
+      <td>2.0</td>
+      <td>71.8</td>
+      <td>Male</td>
+      <td>18</td>
+      <td>Not Hisp/Latino</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>766</th>
+      <td>162</td>
+      <td>24</td>
+      <td>1</td>
+      <td>0</td>
+      <td>AD</td>
+      <td>5.0</td>
+      <td>71.8</td>
+      <td>Male</td>
+      <td>18</td>
+      <td>Not Hisp/Latino</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>4 rows × 61 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The data for patient 162 appears ok. They enter the study with AD, change back to MCI, then at 24 months convert back to AD.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[442]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># plot with plotly</span>
+<span class="n">trace1</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+                <span class="n">x</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">dx_bl_df</span><span class="o">.</span><span class="n">dx_bl</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">),</span>
+                <span class="n">y</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">dx_bl_df</span><span class="o">.</span><span class="n">dx_bl</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">),</span>
+                <span class="n">hoverinfo</span><span class="o">=</span><span class="s1">&#39;x+y&#39;</span><span class="p">,</span>
+                <span class="n">opacity</span> <span class="o">=</span> <span class="mf">0.75</span>
+                <span class="p">)</span>
+
+<span class="n">trace2</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+                <span class="n">y</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">dx_bl_df</span><span class="o">.</span><span class="n">ptgender</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">),</span>
+                <span class="n">x</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">dx_bl_df</span><span class="o">.</span><span class="n">ptgender</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">dx_bl_df</span><span class="o">.</span><span class="n">ptgender</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">),</span>
+                <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;h&#39;</span><span class="p">,</span>
+                <span class="n">hoverinfo</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span>
+                <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+                    <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;rgb(116,159,199)&#39;</span><span class="p">,</span> <span class="s1">&#39;rgb(245,169,114)&#39;</span><span class="p">]),</span>
+                <span class="n">opacity</span> <span class="o">=</span> <span class="mf">0.75</span>
+                <span class="p">)</span>
+
+<span class="n">trace3</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Histogram</span><span class="p">(</span>
+                <span class="n">x</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">dx_bl_df</span><span class="o">.</span><span class="n">age</span><span class="p">),</span>
+                <span class="n">hoverinfo</span><span class="o">=</span><span class="s1">&#39;x+y&#39;</span><span class="p">,</span>
+                <span class="n">opacity</span> <span class="o">=</span> <span class="mf">0.75</span>
+                <span class="p">)</span>
+
+<span class="n">trace4</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Histogram</span><span class="p">(</span>
+                <span class="n">x</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">dx_bl_df</span><span class="o">.</span><span class="n">pteducat</span><span class="p">),</span>
+                <span class="n">hoverinfo</span><span class="o">=</span><span class="s1">&#39;x+y&#39;</span><span class="p">,</span>
+                <span class="n">opacity</span> <span class="o">=</span> <span class="mf">0.75</span>
+                <span class="p">)</span>
+
+<span class="n">trace5</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+                <span class="n">x</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">dx_bl_df</span><span class="o">.</span><span class="n">ptmarry</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">),</span>
+                <span class="n">hoverinfo</span><span class="o">=</span><span class="s1">&#39;x+y&#39;</span><span class="p">,</span>
+                <span class="n">y</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">dx_bl_df</span><span class="o">.</span><span class="n">ptmarry</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">),</span>
+                <span class="n">opacity</span> <span class="o">=</span> <span class="mf">0.75</span>
+                <span class="p">)</span>
+
+<span class="n">trace6</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+                <span class="n">x</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">dx_bl_df</span><span class="o">.</span><span class="n">ptethcat</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">),</span>
+                <span class="n">hoverinfo</span><span class="o">=</span><span class="s1">&#39;x+y&#39;</span><span class="p">,</span>
+                <span class="n">y</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">dx_bl_df</span><span class="o">.</span><span class="n">ptethcat</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">),</span>
+                <span class="n">opacity</span> <span class="o">=</span> <span class="mf">0.75</span>
+                <span class="p">)</span>
+
+<span class="c1"># make subplots</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plotly</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">make_subplots</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">print_grid</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> 
+                                 <span class="n">subplot_titles</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Frequency of Diagnosis Category&#39;</span><span class="p">,</span> <span class="s1">&#39;Percent of Converts by Gender&#39;</span><span class="p">,</span>
+                                                 <span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;Frequency of Education Amount&#39;</span><span class="p">,</span> <span class="s1">&#39;Frequency of Marital Category&#39;</span><span class="p">,</span> <span class="s1">&#39;Frequency of Ethnicity Group&#39;</span><span class="p">))</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">append_trace</span><span class="p">(</span><span class="n">trace1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">append_trace</span><span class="p">(</span><span class="n">trace2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">append_trace</span><span class="p">(</span><span class="n">trace3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">append_trace</span><span class="p">(</span><span class="n">trace4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">append_trace</span><span class="p">(</span><span class="n">trace5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">append_trace</span><span class="p">(</span><span class="n">trace6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># update layout</span>
+<span class="n">fig</span><span class="p">[</span><span class="s1">&#39;layout&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">bargap</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">bargroupgap</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">1200</span><span class="p">,</span> <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">[</span><span class="s1">&#39;layout&#39;</span><span class="p">][</span><span class="s1">&#39;xaxis1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Baseline Diagnosis&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">[</span><span class="s1">&#39;layout&#39;</span><span class="p">][</span><span class="s1">&#39;yaxis1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">[</span><span class="s1">&#39;layout&#39;</span><span class="p">][</span><span class="s1">&#39;xaxis2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Percent&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">[</span><span class="s1">&#39;layout&#39;</span><span class="p">][</span><span class="s1">&#39;xaxis3&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Years&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">[</span><span class="s1">&#39;layout&#39;</span><span class="p">][</span><span class="s1">&#39;yaxis3&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">[</span><span class="s1">&#39;layout&#39;</span><span class="p">][</span><span class="s1">&#39;xaxis4&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Years&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">[</span><span class="s1">&#39;layout&#39;</span><span class="p">][</span><span class="s1">&#39;yaxis4&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">[</span><span class="s1">&#39;layout&#39;</span><span class="p">][</span><span class="s1">&#39;xaxis5&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Marital Status&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">[</span><span class="s1">&#39;layout&#39;</span><span class="p">][</span><span class="s1">&#39;yaxis5&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">[</span><span class="s1">&#39;layout&#39;</span><span class="p">][</span><span class="s1">&#39;xaxis6&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Ethnicity&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">[</span><span class="s1">&#39;layout&#39;</span><span class="p">][</span><span class="s1">&#39;yaxis6&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+<span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;dx_demo&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[442]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~ilikebrains/104.embed" height="1200px" width="100%"></iframe>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The above visuals give an overview of demographic information as it relates to AD conversion. The average patient enters the study is a male with a diagnosis of late MCI, has a university degree, is married and not Hispanic/Latino.</p>
+<p>Next, we'll investigate whether the patients that convert differ from the rest of the sample on any of the cognitive or biological measures.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.3-Do-converters-differ-from-the-rest-of-the-group?">2.3 Do converters differ from the rest of the group?<a class="anchor-link" href="#2.3-Do-converters-differ-from-the-rest-of-the-group?">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This section performs some statistical analyses to investigate whether there are differences from patients with a certain diagnosis that convert to AD from those patients that don't. This will be modeled two ways.</p>
+<ol>
+<li><p>Using measures from baseline assessment. While patients early in the disease course may not exhibit impairments on cognitive assessments or widespread neurodegeneration, it is important to consider whether there are measures that can help identify patients that convert to AD as early as possible as it will provide for an earlier medical intervention.</p>
+</li>
+<li><p>Using measures from visit before conversion. These data points may be the most indicative, as the neurodegeneration and related impairments are likely accelerating.</p>
+</li>
+</ol>
+<p>The approach will be to visualize the trends in the data and run a series of analyses of variance with post-hoc tests by comparing patients within groups created using thier baseline diagnosis. For the patients that convert, we will omit the AD and SMC categories as the AD converts have no preceeding data points and only one of the SMC patients converted to AD during the study. This leaves us three basline diagnosis groups: CN, early MCI, and late MCI.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.3.1-Baseline-differences">2.3.1 Baseline differences<a class="anchor-link" href="#2.3.1-Baseline-differences">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[443]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># index values of converts</span>
+<span class="n">converts</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dx_bl_df</span><span class="o">.</span><span class="n">rid</span><span class="p">)</span>
+
+<span class="c1"># create column to code converts</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;converted&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rid</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">converts</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># extract baseline data of CN, eMCI, and lMCI baseline diagnosis groups</span>
+<span class="n">bl_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">viscode</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">df</span><span class="o">.</span><span class="n">dx_bl</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;CN&#39;</span><span class="p">,</span> <span class="s1">&#39;EMCI&#39;</span><span class="p">,</span> <span class="s1">&#39;LMCI&#39;</span><span class="p">])]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[464]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># group dataframe by baseline diagnosis</span>
+<span class="n">dx_group</span> <span class="o">=</span> <span class="n">bl_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;dx_bl&#39;</span><span class="p">,</span> <span class="s1">&#39;converted&#39;</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[465]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># display descriptive statistics</span>
+<span class="n">dx_group</span><span class="p">[</span><span class="s1">&#39;cdrsb_bl&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[465]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+    <tr>
+      <th>dx_bl</th>
+      <th>converted</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">CN</th>
+      <th>0</th>
+      <td>395.0</td>
+      <td>0.030380</td>
+      <td>0.124789</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>20.0</td>
+      <td>0.050000</td>
+      <td>0.153897</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">EMCI</th>
+      <th>0</th>
+      <td>266.0</td>
+      <td>1.191729</td>
+      <td>0.677737</td>
+      <td>0.5</td>
+      <td>0.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>39.0</td>
+      <td>1.987179</td>
+      <td>0.921149</td>
+      <td>0.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">LMCI</th>
+      <th>0</th>
+      <td>286.0</td>
+      <td>1.391608</td>
+      <td>0.798331</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>270.0</td>
+      <td>1.914815</td>
+      <td>0.970840</td>
+      <td>0.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>5.5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[451]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.formula.api</span> <span class="k">import</span> <span class="n">ols</span>
+<span class="n">formula</span> <span class="o">=</span> <span class="s1">&#39;cdrsb_bl ~ C(dx_bl) + C(converted)&#39;</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">bl_df</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[457]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[457]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>        <td>cdrsb_bl</td>     <th>  R-squared:         </th> <td>   0.536</td> 
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.535</td> 
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   490.7</td> 
+</tr>
+<tr>
+  <th>Date:</th>             <td>Sat, 01 Sep 2018</td> <th>  Prob (F-statistic):</th> <td>8.82e-212</td>
+</tr>
+<tr>
+  <th>Time:</th>                 <td>14:51:18</td>     <th>  Log-Likelihood:    </th> <td> -1332.4</td> 
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>  1276</td>      <th>  AIC:               </th> <td>   2673.</td> 
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>  1272</td>      <th>  BIC:               </th> <td>   2693.</td> 
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     3</td>      <th>                     </th>     <td> </td>    
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>    
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+          <td></td>             <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>         <td>    0.0062</td> <td>    0.034</td> <td>    0.183</td> <td> 0.855</td> <td>   -0.060</td> <td>    0.073</td>
+</tr>
+<tr>
+  <th>C(dx_bl)[T.EMCI]</th>  <td>    1.2206</td> <td>    0.052</td> <td>   23.435</td> <td> 0.000</td> <td>    1.118</td> <td>    1.323</td>
+</tr>
+<tr>
+  <th>C(dx_bl)[T.LMCI]</th>  <td>    1.3862</td> <td>    0.050</td> <td>   27.905</td> <td> 0.000</td> <td>    1.289</td> <td>    1.484</td>
+</tr>
+<tr>
+  <th>C(converted)[T.1]</th> <td>    0.5215</td> <td>    0.050</td> <td>   10.493</td> <td> 0.000</td> <td>    0.424</td> <td>    0.619</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td>227.685</td> <th>  Durbin-Watson:     </th> <td>   1.941</td> 
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.000</td>  <th>  Jarque-Bera (JB):  </th> <td> 492.835</td> 
+</tr>
+<tr>
+  <th>Skew:</th>          <td> 1.010</td>  <th>  Prob(JB):          </th> <td>9.60e-108</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 5.277</td>  <th>  Cond. No.          </th> <td>    4.22</td> 
+</tr>
+</table><br/><br/>Warnings:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[458]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sm</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">anova_lm</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">typ</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[458]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sum_sq</th>
+      <th>df</th>
+      <th>F</th>
+      <th>PR(&gt;F)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>C(dx_bl)</th>
+      <td>432.688766</td>
+      <td>2.0</td>
+      <td>456.308190</td>
+      <td>4.084931e-150</td>
+    </tr>
+    <tr>
+      <th>C(converted)</th>
+      <td>52.199928</td>
+      <td>1.0</td>
+      <td>110.098789</td>
+      <td>9.248691e-25</td>
+    </tr>
+    <tr>
+      <th>Residual</th>
+      <td>603.079369</td>
+      <td>1272.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     </div>
   </div>
