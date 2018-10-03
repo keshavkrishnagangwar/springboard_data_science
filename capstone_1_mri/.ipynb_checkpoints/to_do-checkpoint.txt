@@ -1,0 +1,5 @@
+coefficient of variation
+percision vs recall
+
+Label visit one year before conversion as 1 and drop conversion visit
+And then 2 years
